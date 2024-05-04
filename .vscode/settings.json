@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "onFocusChange",
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showAbbreviationSuggestions": true,
+    "editor.defaultFormatter": "formulahendry.auto-rename-tag"
+}

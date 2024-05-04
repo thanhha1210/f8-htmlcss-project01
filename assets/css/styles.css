@@ -1,0 +1,601 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    --primary-color: #0F1B4C;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;     /* The 2nd is the alternative font if the 1st font has error */
+}
+
+/*--------------- Common ---------------*/
+.content {
+    width: 1100px;
+    max-width: calc(100% - 48px);       /* Measure when width of web interface < 1100px  */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 98px; 
+    padding: 18px 16px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Set the maximum number of line is 2, information more than that will be ... */
+.line-clamps {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*-------------- Header ----------------*/
+.header {
+    position: relative;
+    background:#E6F0FF;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;    /* Adjust for all the items in navbar center vertically */
+    padding: 38px 0;          /* Not use margin b/c will have margin Collapse (having white space at the top) */
+}
+
+.navbar ul {
+    display: flex;
+    margin-left: 50px;
+}
+
+.navbar ul a {  
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #4F5361;
+    padding: 8px 14px;
+}
+
+.navbar ul a:hover {
+    text-decoration: underline;
+}
+
+.navbar .actions {
+    margin-left: auto;
+}
+
+.navbar .action-link {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-right: 18px;
+}
+
+.navbar .action-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.hero {
+    margin-top: 130px;
+}
+
+.hero .info {
+    width: 51%;
+}
+
+.hero .sub-title {
+    color: #687690;
+    font-size: 1.8rem;
+    line-height: 1.5; 
+    letter-spacing: 0.01em;
+}
+
+.hero .title {
+    color: #000336;
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: 1.19;
+    margin-top: 8px; 
+}
+
+.hero .desc {
+    color: #5A6473;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.78;
+    margin-top: 30px;
+}
+
+.hero .btn {
+    width: 170px;
+    margin-top: 55px;
+    border-radius: 12px;
+}
+
+.hero-img {
+    position: absolute;
+    right: calc((100vw - 1000px) / 2 - 100px);
+    bottom: 0;
+}
+
+/*-------------- Clients ----------------*/
+.clients {
+    margin-top: 79px;
+    padding: 43px 165px 41px 165px;
+}
+.clients .row {
+    display: flex;
+    justify-content: space-between; /*child element as far as possible*/
+}
+
+.clients .desc {
+    color: #7D8589;
+    font-size: 1.6rem;
+    line-height: 1.25; 
+    margin-top: 23px;
+}
+
+.clients .img {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+/*-------------- Guides ----------------*/
+.guide {
+    margin-top: 40x;
+    padding: 79px;
+}
+
+.guide .sub-title {
+    position: relative;
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1; 
+    text-align: center;
+}
+
+.guide .sub-title::before {
+    content: "";
+    display: inline-block;
+    width: 41px;
+    height: 4px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #000339;
+    position: absolute;
+    top: -10px;
+    left: 50%;      /* go left by 50% of its parent*/
+    transform: translateX(-50%);    /* -50% its dimension*/
+}
+
+.guide .desc {
+    color: #5A6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.88;
+    text-align: center;
+    margin-top: 20px;
+    width: 460px;
+    max-width: 100%;    /* to avoid scroll bar when width < 460px*/
+    margin: 0 auto;     /* margin auto to set center */
+}
+
+.guide .list-guide {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.guide .guide-item {
+    margin: 0 70px;
+    text-align: center;
+}
+
+.guide-item .title {
+    color: #3B3C45;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-top: 26px;
+}
+
+.guide-item .link {
+    color: #0689FF;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.guide-item .arrow {
+    margin-left: 6px;
+}
+
+.guide-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    min-width: 170px;
+}
+
+/*----------------- Features -------------------*/
+.feature {
+    background-color: #F5FAFE;
+    padding: 110px 165px;
+    margin-top: 40px;
+}
+
+.feature .sub-title {
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1; 
+}
+
+.feature .row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature .desc {
+    color: #5A6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.feature .link {
+    color: #0689FF;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.feature .arrow {
+    margin-left: 6px;           
+}
+
+.feature .list {
+    margin-top: 70px;
+    display: flex;
+    gap: 30px;      /* with flex = 1 will make even gap and same size for 3 items*/
+}
+
+.feature .item {
+    background: #fff;
+    flex: 1;
+    border-radius: 12px;
+}
+
+.feature .list .thumb {
+    width: 100%;
+    height: 227px;
+    object-fit: cover;  /*make sure right ratio width:height*/
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.feature .item .body {
+    margin-top: 17px;
+    margin-left: 20px;
+}
+
+.feature .list .title > a {
+    color: #000339;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5; 
+
+    /* Set the maximum number of line is 2, information more than that will be ... */
+   
+}
+
+.feature .list .desc {
+    color: #A3A6AB;
+    font-size: 1.4rem;
+    --line-clamp: 3;    /* Set line clamp b/c the default is 2 */
+    word-break: break-all;
+}
+
+.feature .list .info {
+    margin-top: 22px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.feature .list .label {
+    color: #4D4D52;
+    margin-left: 8px;
+    font-size: 1.4rem;
+    letter-spacing: 0.01rem;
+}
+
+.feature .icon {
+    margin-left: 23px;
+}
+
+.feature .icon:first-child {
+    margin-left: 0;
+}
+
+/*----------------- Stats ---------------------*/
+
+.stats {
+    margin-top: 75px;
+    padding: 50px;
+}
+
+.stats .content {
+    width: 1048px;
+}
+
+.stats .row {
+    display: flex;
+}
+
+.stats .img-block, .stats .info {
+    width: 50%;
+}
+
+.stats .img-block img {
+    width: 400px;
+    height: 460px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 12px;
+    display: block;
+    margin-left: auto;
+}
+
+.stats-trend {
+    position: absolute;
+    width: 239px;
+    height: 252px;
+    padding: 45px 22px 40px 22px;
+    border-radius: 0px 0px 12px 12px;
+    background: #FFF;
+}
+
+.stats-trend .row {
+    display: flex;
+}
+
+.stats-trend .value {
+    color: #000339;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.26px;
+}
+
+.stats-trend .icon {
+    margin-left: auto;
+    /* No need to add display: block b/c the parent is flex. If not, have to add*/
+}
+
+.stats-trend .desc {
+    color: #A7A7A7;
+    width: 195px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.stats-trend .separate {
+    height: 1px;
+    background: #E9E9E9;
+    margin-top: 25px;
+}
+
+.stats-trend .avatar-block {
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.stats-trend .avatar-group {
+    display: flex;  
+}
+
+.stats-trend .avatar {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-left: -3px; 
+}
+
+.stats .info {
+    padding: 79px 0 0 165px;
+    width: 239px;
+    height: 252px;
+    flex-shrink: 0;
+}
+
+.stats .info .title {
+    position: relative;
+    width: 269px;
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.28;
+    
+}
+
+.stats .info .title::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+}
+
+.stats .sub-title {
+    width: 309px;
+    color: #5A6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+    margin-top: 20px;
+}
+
+.stats .row:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+.stats .qty-item {
+    margin-top: 110px;
+    margin-left: 30px;
+}
+
+.stats .qty {
+    color: #000;
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.stats .qty-desc {
+    color: #7B8087;
+    font-size: 1.8rem;
+    margin-top: 24px;
+}
+
+/*-------------------- Subscription ---------------------*/
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 370px; 
+    border-radius: 20px;
+    background: #063183;
+}
+
+.subscription .info {
+    margin-left: 80px;
+    width: 671px;
+    max-width: 100%;
+}
+
+.subscription .info .sub-title {
+    color: #FFF;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.subscription .info .desc {
+    color: #FFF;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875;
+    opacity: 0.75;
+    margin-top: 15px;
+    --line-clamp: 3;
+}
+
+.subscription .info .btn {
+    width: 151px;
+    border-radius: 12px;
+    background: #FFF;
+    color: #002366;
+    margin-top: 20px;
+}
+
+.subscription .image {
+    position: absolute;
+    text-align: start;
+    bottom: 0;
+    right: 221px;
+}
+
+/*------------------ Footer ------------------*/
+.footer {
+    margin-top: 55px;
+    padding: 50px;
+}
+
+.footer .row {
+    display: flex;
+}
+
+.footer .row-top {
+    gap: 185px;
+}
+
+.footer .heading {
+    color: #1C1C1D;
+    font-family: 'Lato';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.footer .list, .footer .desc {
+    margin-top: 42px;
+}
+
+.footer .item a, .footer .desc {
+    color: #7A7A7E;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.footer .item  a{
+    white-space: nowrap;
+}
+
+.footer .item {
+    margin-top: 18px;
+}
+
+.footer .desc {
+    margin-bottom: 40px;
+}
+
+.footer .copyright {
+    color: #C2C2C2;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.footer .second-row {
+    margin-top: 81px;
+    justify-content: space-between;
+}
