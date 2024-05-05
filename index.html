@@ -18,22 +18,24 @@
 </head>
 <body>
     <!--main: same as div but have meaning. Put all the thing in main-->
-    <main>
+    <main id = "home">
         <!-- Header: same as div but have meaning as header. Here, creating mo neo --> 
         <header class="fix-header">
             <div class="content">
                 <nav class="navbar">
 
                     <!-- Logo -->
-                    <img src="./assets/img/Logo.svg" alt="Besnik.">
+                    <a href="#">
+                        <img src="./assets/img/Logo.svg" alt="Besnik.">
+                    </a>
                     
                     <!-- Navigation -->
                     <ul>
-                        <li><a href="#!">Home</a></li>
-                        <li><a href="#!">Features</a></li>
-                        <li><a href="#!">Services</a></li>
-                        <li><a href="#!">Resources</a></li>
-                        <li><a href="#!">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#feature">Features</a></li>
+                        <li><a href="#resource">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                     <!-- Action -->
                     <div class="actions">
@@ -91,7 +93,7 @@
         </div>
 
         <!-- Guides -->
-        <div class="guide">
+        <div class="guide" id = "service">
             
             <div class="content">
                 <h2 class="sub-title">How its works?</h2>
@@ -131,7 +133,7 @@
         </div>
     
        <!-- Feature -->
-       <div class="feature">
+       <div class="feature" id = "feature">
             <div class="content">
                
                 <header>
@@ -210,7 +212,7 @@
         </div>
 
         <!-- Stats -->
-        <div class="stats">
+        <div class="stats" id = "resource">
             <div class="content">
                 <div class="row">
                     <div class="img-block">
@@ -288,7 +290,7 @@
         </div>
 
         <!-- Subscription -->
-        <div class="subscription">
+        <div class="subscription" id = "contact">
             <div class="content">
                 <div class="body">
                     <div class="info">
