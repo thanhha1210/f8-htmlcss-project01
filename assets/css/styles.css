@@ -71,6 +71,8 @@ a {
 
 .hero-wrap {
     position: relative;
+    display: flex;
+    align-items: center;
     background:#E6F0FF;
     height: calc(100vh - 90px);  /* 90px is for the stick fix-header*/
 }
@@ -107,9 +109,6 @@ a {
     border-radius: 8px;
 }
 
-.hero {
-    padding-top: 130px;
-}
 
 .hero .info {
     width: 51%;
